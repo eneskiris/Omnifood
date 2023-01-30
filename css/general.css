@@ -27,7 +27,9 @@ Paragraph default:1.6
  #fdf2e9
  #fae5d3
  #eb984e
- - Shades: #cf711f
+ - Shades: 
+ #cf711f
+ #45260a
  - Accents:
  - Greys:
 
@@ -137,6 +139,7 @@ body {
   letter-spacing: 0.75px;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -146,6 +149,10 @@ body {
   font-weight: 600;
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
+
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 
   transition: all 0.3s;
 }
@@ -159,6 +166,19 @@ body {
 .btn--full:hover,
 .btn--full:active {
   background-color: #cf711f;
+}
+
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+  transition: all 0.5s;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
 }
 
 .btn--outline:link,
@@ -207,6 +227,11 @@ body {
   width: 3rem;
   height: 3rem;
   color: #e67e22;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgb(230, 125, 34, 0.5);
 }
 
 /* HELPER/SETTINGS CLASSES */
